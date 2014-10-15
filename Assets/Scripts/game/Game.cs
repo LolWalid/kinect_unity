@@ -15,13 +15,14 @@ public class Game : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		transform.Translate (vitesse);
-		if (handR.transform.position.x > 4 && transform.position.x > 4)
+/*		if (handR.transform.position.x > 4 && transform.position.x > 4)
 				Debug.Log ("Right");
 		else if ((handL.transform.position.x < -4 || handR.transform.position.x < -4) && transform.position.x < -4)
 				Debug.Log ("Left");
 		else if (handR.transform.position.x > 4 && transform.position.x > 4)
-				Debug.Log ("top");
+				Debug.Log ("top");*/
 
-
+		if (transform.position.z < -8)
+			Destroy(this.gameObject);
 	}
 }
